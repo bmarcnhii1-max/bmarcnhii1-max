@@ -33,4 +33,4 @@
 ![Stats](https://github-readme-stats.vercel.app/api?username=bmarcnhii1-max&show_icons=true&theme=dark&hide_border=true)
 ![Streak](https://streak-stats.demolab.com?user=bmarcnhii1-max&theme=dark&hide_border=true)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=bmarcnhii1-max&layout=compact&theme=dark&hide_border=true)
-![Jokes Card](https://readme-jokes.vercel.app/api?theme=dark&hideBorder)
+![Шутка дня](joke.svg)

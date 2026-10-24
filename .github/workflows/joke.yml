@@ -1,0 +1,25 @@
+name: Daily RU joke card
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  joke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch, translate and render joke
+        run: python3 scripts/joke.py
+
+      - name: Commit joke.svg
+        run: |
+          git config user.name "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add joke.svg
+          git diff --cached --quiet && echo "no changes" || (git commit -m "joke: daily update" && git push)
