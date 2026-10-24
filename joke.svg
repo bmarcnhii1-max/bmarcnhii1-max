@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="136">
-<rect width="600" height="136" rx="8" fill="#0d1117" stroke="#30363d"/>
-<text x="24" y="30" font-family="monospace" font-size="13" fill="#30d158">шутка дня &#8226; en&#8594;ru, машинный перевод</text>
-<text x="24" y="58" font-family="monospace" font-size="14" fill="#c9d1d9">Почему программист всегда носил с собой карандаш?</text><text x="24" y="82" font-family="monospace" font-size="14" fill="#c9d1d9"></text><text x="24" y="106" font-family="monospace" font-size="14" fill="#c9d1d9">Они предпочитали писать на C#.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="112">
+<rect width="600" height="112" rx="8" fill="#0d1117" stroke="#30363d"/>
+<text x="24" y="30" font-family="monospace" font-size="13" fill="#30d158">анекдот дня</text>
+<text x="24" y="58" font-family="monospace" font-size="14" fill="#c9d1d9">Встретились как-то сон и дедлайн.</text><text x="24" y="82" font-family="monospace" font-size="14" fill="#c9d1d9">Сон проиграл со счётом 0:8.</text>
 </svg>
