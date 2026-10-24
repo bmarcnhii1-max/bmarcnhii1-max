@@ -4,7 +4,6 @@
 
 [![Telegram](https://img.shields.io/badge/Telegram-@create_mars-26A5E4?logo=telegram&logoColor=white)](https://t.me/create_mars)
 [![Hugging Face](https://img.shields.io/badge/HuggingFace-bmarchiii-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/bmarchiii)
-![Profile views](https://komarev.com/ghpvc/?username=bmarcnhii1-max-v2&color=30d158)
 
 </div>
 
