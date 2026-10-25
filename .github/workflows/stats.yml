@@ -1,0 +1,28 @@
+name: Full commit stats card
+
+on:
+  schedule:
+    - cron: '10 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build stats.svg
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STATS_PAT: ${{ secrets.STATS_PAT }}
+        run: python3 scripts/stats.py
+
+      - name: Commit stats.svg
+        run: |
+          git config user.name "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add stats.svg
+          git diff --cached --quiet && echo "no changes" || (git commit -m "stats: daily update" && git push)
