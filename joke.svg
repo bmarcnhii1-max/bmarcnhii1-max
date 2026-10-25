@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="112">
-<rect width="600" height="112" rx="8" fill="#0d1117" stroke="#30363d"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="256">
+<rect width="600" height="256" rx="8" fill="#0d1117" stroke="#30363d"/>
 <text x="24" y="30" font-family="monospace" font-size="13" fill="#30d158">анекдот дня</text>
-<text x="24" y="58" font-family="monospace" font-size="14" fill="#c9d1d9">Штирлиц долго смотрел в одну точку.</text><text x="24" y="82" font-family="monospace" font-size="14" fill="#c9d1d9">Потом точка не выдержала и отвела взгляд.</text>
+<text x="24" y="58" font-family="monospace" font-size="14" fill="#c9d1d9">Встретились как-то русский, немец и американец.</text><text x="24" y="82" font-family="monospace" font-size="14" fill="#c9d1d9">Решили выяснить, кто дольше без интернета проживёт.</text><text x="24" y="106" font-family="monospace" font-size="14" fill="#c9d1d9">Немец продержался день — и пошёл чинить роутер</text><text x="24" y="130" font-family="monospace" font-size="14" fill="#c9d1d9">соседу.</text><text x="24" y="154" font-family="monospace" font-size="14" fill="#c9d1d9">Американец продержался два — и написал об этом в</text><text x="24" y="178" font-family="monospace" font-size="14" fill="#c9d1d9">твиттер с чужого телефона.</text><text x="24" y="202" font-family="monospace" font-size="14" fill="#c9d1d9">Русский прожил неделю и не заметил: у него провайдер</text><text x="24" y="226" font-family="monospace" font-size="14" fill="#c9d1d9">и так каждую пятницу «профилактика».</text>
 </svg>
