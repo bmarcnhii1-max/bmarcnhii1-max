@@ -9,13 +9,6 @@
 
 ---
 
-### 🛠 Стек по всем репозиториям
-
-![Kotlin](https://img.shields.io/badge/Kotlin-47%25-7F52FF?logo=kotlin&logoColor=white)
-![C#](https://img.shields.io/badge/C%23-32%25-512BD4?logo=csharp&logoColor=white)
-![Python](https://img.shields.io/badge/Python-15%25-3776AB?logo=python&logoColor=white)
-![PowerShell](https://img.shields.io/badge/PowerShell-6%25-5391FE?logo=powershell&logoColor=white)
-
 ### 📦 Репозитории
 
 | Репозиторий | Что внутри |
