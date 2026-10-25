@@ -4,6 +4,7 @@
 
 [![Telegram](https://img.shields.io/badge/Telegram-@create_mars-26A5E4?logo=telegram&logoColor=white)](https://t.me/create_mars)
 [![Hugging Face](https://img.shields.io/badge/HuggingFace-bmarchiii-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/bmarchiii)
+![from Ukraine](https://img.shields.io/badge/from-Ukraine-FFD700?labelColor=0057B7)
 
 </div>
 
@@ -31,6 +32,7 @@
 ### 📊 Статистика
 
 ![Полные коммиты](stats.svg)
+![Активность](activity.svg)
 ![Streak](https://streak-stats.demolab.com?user=bmarcnhii1-max&theme=dark&hide_border=true)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=bmarcnhii1-max&layout=compact&theme=dark&hide_border=true)
 ![Шутка дня](joke.svg)
