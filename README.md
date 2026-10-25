@@ -31,7 +31,6 @@
 ### 📊 Статистика
 
 ![Полные коммиты](stats.svg)
-![Активность](activity.svg)
 ![Streak](https://streak-stats.demolab.com?user=bmarcnhii1-max&theme=dark&hide_border=true)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=bmarcnhii1-max&layout=compact&theme=dark&hide_border=true)
 ![Шутка дня](joke.svg)
