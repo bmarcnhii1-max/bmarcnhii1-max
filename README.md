@@ -4,7 +4,6 @@
 
 [![Telegram](https://img.shields.io/badge/Telegram-@create_mars-26A5E4?logo=telegram&logoColor=white)](https://t.me/create_mars)
 [![Hugging Face](https://img.shields.io/badge/HuggingFace-bmarchiii-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/bmarchiii)
-![from Ukraine](https://img.shields.io/badge/from-Ukraine-FFD700?labelColor=0057B7)
 
 </div>
 
