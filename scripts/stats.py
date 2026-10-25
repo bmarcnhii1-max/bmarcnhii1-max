@@ -1,7 +1,6 @@
-"""Full commit stats across all owned repos (you + Claude + others).
+"""Clone of the github-readme-stats card, but Total Commits counts EVERY commit
+in the owned repos (you + Claude + others), not just your email.
 
-Counts every commit in the default branch via a blobless partial clone,
-so Claude-authored commits count too (GitHub's own stats only see your email).
 Private repos need STATS_PAT (a classic PAT with repo scope); without it they
 are skipped gracefully.
 """
@@ -15,6 +14,14 @@ OWNER = "bmarcnhii1-max"
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 
+# github-readme-stats "dark" theme.
+BG = "#0d1117"
+BORDER = "#30363d"
+TITLE = "#fff"
+TEXT = "#9f9f9f"
+VALUE = "#fff"
+GREEN = "#79ff97"
+
 
 def sh(cmd, **kw):
     return subprocess.run(cmd, capture_output=True, text=True, **kw)
@@ -27,21 +34,20 @@ def repo_url(name):
 
 
 def repos():
-    r = sh(["gh", "repo", "list", OWNER, "--json", "name", "--limit", "100"])
+    r = sh(["gh", "repo", "list", OWNER, "--json", "name,stargazerCount",
+            "--limit", "100"])
     try:
-        return [x["name"] for x in json.loads(r.stdout or "[]")]
+        return json.loads(r.stdout or "[]")
     except Exception:
         return []
 
 
-def classify(email, name):
-    e = (email or "").lower()
-    n = (name or "").lower()
-    if "anthropic.com" in e or n == "claude":
-        return "claude"
-    if "bmarcnhii1" in e or "alumno.uned.es" in e:
-        return "you"
-    return "other"
+def search_count(q):
+    r = sh(["gh", "api", f"search/issues?q={q}", "--jq", ".total_count"])
+    try:
+        return int((r.stdout or "0").strip())
+    except ValueError:
+        return 0
 
 
 def count_repo(name, tmp):
@@ -52,74 +58,80 @@ def count_repo(name, tmp):
         return None
     total = sh(["git", "-C", dest, "rev-list", "--count", "HEAD"])
     try:
-        total_n = int((total.stdout or "0").strip())
+        return int((total.stdout or "0").strip())
     except ValueError:
         return None
-    parts = {"you": 0, "claude": 0, "other": 0}
-    log = sh(["git", "-C", dest, "log", "--format=%ae%x00%an%x00"])
-    for line in (log.stdout or "").splitlines():
-        fields = line.strip("\x00").split("\x00")
-        if len(fields) < 2:
-            continue
-        parts[classify(fields[0].strip(), fields[1].strip())] += 1
-    return {"name": name, "total": total_n, **parts}
+
+
+def rank_letter(total):
+    if total >= 500:
+        return "S"
+    if total >= 200:
+        return "A+"
+    if total >= 100:
+        return "A"
+    if total >= 50:
+        return "B+"
+    if total >= 20:
+        return "B"
+    return "C+"
 
 
 def esc(s):
-    return html.escape(s, quote=False)
+    return html.escape(str(s), quote=False)
 
 
-def render(rows):
-    rows = sorted(rows, key=lambda r: (r is not None, (r or {}).get("total", 0)))
-    rows = [r for r in rows if r is not None]
-    known = [r for r in rows if r["total"] is not None]
-    top = max([r["total"] for r in known] + [1])
-    tot = sum(r["total"] for r in known)
-    you = sum(r["you"] for r in known)
-    claude = sum(r["claude"] for r in known)
-
-    rh, y0 = 34, 52
-    h = y0 + len(rows) * rh + 40
-    out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="600" height="{h}">']
-    out.append(f'<rect width="600" height="{h}" rx="8" fill="#0d1117" stroke="#30363d"/>')
-    out.append('<text x="24" y="30" font-family="monospace" font-size="13" fill="#30d158">'
-               f'полные коммиты · всего {tot} (ты {you} · claude {claude})</text>')
-    y = y0
-    for r in rows:
-        if r["total"] is None:
-            line = (f'<text x="24" y="{y}" font-family="monospace" font-size="13" fill="#8b949e">'
-                    f'{esc(r["name"]):24} private / n-a</text>')
-            out.append(line)
-            y += rh
-            continue
-        w = max(4, int(200 * r["total"] / top))
-        wy = max(2, int(w * r["you"] / max(r["total"], 1)))
-        wc = max(0, int(w * r["claude"] / max(r["total"], 1)))
-        bar = (f'<rect x="250" y="{y - 11}" width="{w}" height="10" rx="5" fill="#21262d"/>'
-               f'<rect x="250" y="{y - 11}" width="{wy}" height="10" rx="5" fill="#30d158"/>'
-               f'<rect x="{250 + wy}" y="{y - 11}" width="{wc}" height="10" rx="5" fill="#a371f7"/>')
-        label = (f'<text x="24" y="{y}" font-family="monospace" font-size="13" fill="#c9d1d9">'
-                 f'{esc(r["name"]):24} {r["total"]}</text>')
-        out.append(label + bar)
-        y += rh
-    out.append(f'<text x="24" y="{y + 8}" font-family="monospace" font-size="11" fill="#8b949e">'
-               '■ ты  ■ claude  ■ прочие · считает все email, не только твой</text>')
-    out.append('</svg>\n')
-    return "".join(out)
+def render(commits, stars, prs, issues):
+    w, h = 495, 200
+    rows = [
+        ("★", "Total Stars Earned:", stars),
+        ("⟳", "Total Commits:", commits),
+        ("⎇", "Total PRs:", prs),
+        ("⚠", "Total Issues:", issues),
+        ("❐", "Contributed to:", 0),
+    ]
+    p = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}">',
+         f'<rect x="0.5" y="0.5" width="{w - 1}" height="{h - 1}" rx="4.5" fill="{BG}" stroke="{BORDER}"/>',
+         f'<text x="25" y="35" font-family="Segoe UI, Ubuntu, sans-serif" font-size="18" font-weight="600" fill="{TITLE}">'
+         f"{esc(OWNER)}'s GitHub Stats</text>"]
+    y = 76
+    for icon, label, value in rows:
+        p.append(f'<text x="25" y="{y}" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14" fill="{GREEN}">{icon}</text>')
+        p.append(f'<text x="48" y="{y}" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14" fill="{TEXT}">{esc(label)}</text>')
+        p.append(f'<text x="300" y="{y}" text-anchor="end" font-family="Segoe UI, Ubuntu, sans-serif" font-size="14" fill="{VALUE}">{esc(value)}</text>')
+        y += 25
+    # Rank circle, like the original.
+    cx, cy, rr = 410, 115, 57
+    frac = max(0.05, min(1.0, commits / 500))
+    p.append(f'<circle cx="{cx}" cy="{cy}" r="{rr}" fill="none" stroke="#333" stroke-width="7"/>')
+    p.append(f'<circle cx="{cx}" cy="{cy}" r="{rr}" fill="none" stroke="{GREEN}" stroke-width="7" '
+             f'stroke-linecap="round" stroke-dasharray="{2 * 3.1416 * rr:.1f}" '
+             f'stroke-dashoffset="{2 * 3.1416 * rr * (1 - frac):.1f}" transform="rotate(-90 {cx} {cy})"/>')
+    p.append(f'<text x="{cx}" y="{cy + 13}" text-anchor="middle" font-family="Segoe UI, Ubuntu, sans-serif" '
+             f'font-size="34" font-weight="600" fill="{VALUE}">{esc(rank_letter(commits))}</text>')
+    p.append('</svg>\n')
+    return "".join(p)
 
 
 def main():
-    names = repos()
-    results = []
+    entries = repos()
+    commits = 0
+    stars = 0
     with tempfile.TemporaryDirectory(prefix="repstats") as tmp:
-        for n in names:
-            info = count_repo(n, tmp)
-            results.append(info if info else {"name": n, "total": None})
-            print(("ok  " if info else "skip") + f" {n}: "
-                  + (str(info["total"]) if info else "n/a"))
+        for e in entries:
+            n = e.get("name", "")
+            c = count_repo(n, tmp)
+            if c is None:
+                print(f"skip {n}: n/a")
+                continue
+            commits += c
+            stars += int(e.get("stargazerCount", 0) or 0)
+            print(f"ok   {n}: {c}")
+    prs = search_count(f"type:pr+author:{OWNER}")
+    issues = search_count(f"type:issue+author:{OWNER}")
     with open(os.path.join(ROOT, "stats.svg"), "w", encoding="utf-8") as f:
-        f.write(render(results))
-    print("stats.svg written")
+        f.write(render(commits, stars, prs, issues))
+    print(f"stats.svg written: commits={commits} stars={stars} prs={prs} issues={issues}")
 
 
 if __name__ == "__main__":
