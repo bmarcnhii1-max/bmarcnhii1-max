@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="160">
-<rect width="600" height="160" rx="8" fill="#0d1117" stroke="#30363d"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="256">
+<rect width="600" height="256" rx="8" fill="#0d1117" stroke="#30363d"/>
 <text x="24" y="30" font-family="monospace" font-size="13" fill="#30d158">анекдот дня</text>
-<text x="24" y="58" font-family="monospace" font-size="14" fill="#c9d1d9">Встретились как-то тестировщик и программист.</text><text x="24" y="82" font-family="monospace" font-size="14" fill="#c9d1d9">Тестировщик: «У меня всё падает».</text><text x="24" y="106" font-family="monospace" font-size="14" fill="#c9d1d9">Программист: «У меня всё работает. Наверное, у нас</text><text x="24" y="130" font-family="monospace" font-size="14" fill="#c9d1d9">разные продакшены».</text>
+<text x="24" y="58" font-family="monospace" font-size="14" fill="#c9d1d9">Тестировщик заходит в бар.</text><text x="24" y="82" font-family="monospace" font-size="14" fill="#c9d1d9">Заказывает пиво. Заказывает ноль пива. Заказывает</text><text x="24" y="106" font-family="monospace" font-size="14" fill="#c9d1d9">999999999 пива.</text><text x="24" y="130" font-family="monospace" font-size="14" fill="#c9d1d9">Заказывает -1 пива. Заказывает ящерицу. Заказывает</text><text x="24" y="154" font-family="monospace" font-size="14" fill="#c9d1d9">null.</text><text x="24" y="178" font-family="monospace" font-size="14" fill="#c9d1d9">Первый реальный посетитель заходит и спрашивает, где</text><text x="24" y="202" font-family="monospace" font-size="14" fill="#c9d1d9">туалет.</text><text x="24" y="226" font-family="monospace" font-size="14" fill="#c9d1d9">Бар взрывается.</text>
 </svg>
