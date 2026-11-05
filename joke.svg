@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="160">
-<rect width="600" height="160" rx="8" fill="#0d1117" stroke="#30363d"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="208">
+<rect width="600" height="208" rx="8" fill="#0d1117" stroke="#30363d"/>
 <text x="24" y="30" font-family="monospace" font-size="13" fill="#30d158">анекдот дня</text>
-<text x="24" y="58" font-family="monospace" font-size="14" fill="#c9d1d9">Приходит жена к мужу-программисту:</text><text x="24" y="82" font-family="monospace" font-size="14" fill="#c9d1d9">— Сходи в магазин, купи батон. А если будут яйца —</text><text x="24" y="106" font-family="monospace" font-size="14" fill="#c9d1d9">возьми десяток.</text><text x="24" y="130" font-family="monospace" font-size="14" fill="#c9d1d9">Муж вернулся с десятью батонами.</text>
+<text x="24" y="58" font-family="monospace" font-size="14" fill="#c9d1d9">Встретились как-то русский, немец и американец — и</text><text x="24" y="82" font-family="monospace" font-size="14" fill="#c9d1d9">решили выяснить, чья сборная сильнее.</text><text x="24" y="106" font-family="monospace" font-size="14" fill="#c9d1d9">Немец: «Наша — машина».</text><text x="24" y="130" font-family="monospace" font-size="14" fill="#c9d1d9">Американец: «А наша — шоу».</text><text x="24" y="154" font-family="monospace" font-size="14" fill="#c9d1d9">Русский: «А наша — сюрприз. Никогда не знаешь, в</text><text x="24" y="178" font-family="monospace" font-size="14" fill="#c9d1d9">какую сторону».</text>
 </svg>
