@@ -20,12 +20,6 @@
 | [vlc-gamebar-widget](https://github.com/bmarcnhii1-max/vlc-gamebar-widget) | Пульт VLC в Game Bar: скорость, перемотка, громкость, плейлист, установщик в один клик. `C#` |
 | [sticker-userbot](https://github.com/bmarcnhii1-max/sticker-userbot) | Юзербот для стикеров в Telegram. `Python` |
 
-### 📌 Закреп
-
-[![blockwave](https://github-readme-stats.vercel.app/api/pin/?username=bmarcnhii1-max&repo=blockwave&theme=dark)](https://github.com/bmarcnhii1-max/blockwave)
-
-[![clawd-botik](https://github-readme-stats.vercel.app/api/pin/?username=bmarcnhii1-max&repo=clawd-botik&theme=dark)](https://github.com/bmarcnhii1-max/clawd-botik)
-
 ### 📊 Статистика
 
 ![Полные коммиты](stats.svg)
