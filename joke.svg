@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="136">
-<rect width="600" height="136" rx="8" fill="#0d1117" stroke="#30363d"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="160">
+<rect width="600" height="160" rx="8" fill="#0d1117" stroke="#30363d"/>
 <text x="24" y="30" font-family="monospace" font-size="13" fill="#30d158">анекдот дня</text>
-<text x="24" y="58" font-family="monospace" font-size="14" fill="#c9d1d9">Приходит новичок в команду:</text><text x="24" y="82" font-family="monospace" font-size="14" fill="#c9d1d9">— Где у вас тут документация?</text><text x="24" y="106" font-family="monospace" font-size="14" fill="#c9d1d9">— Вот этот коллега. Он всё помнит. Наверное.</text>
+<text x="24" y="58" font-family="monospace" font-size="14" fill="#c9d1d9">Встретились как-то русский, немец и американец на</text><text x="24" y="82" font-family="monospace" font-size="14" fill="#c9d1d9">рыбалке.</text><text x="24" y="106" font-family="monospace" font-size="14" fill="#c9d1d9">Клевало только у русского. Остальные сказали, что</text><text x="24" y="130" font-family="monospace" font-size="14" fill="#c9d1d9">это баг водоёма.</text>
 </svg>
