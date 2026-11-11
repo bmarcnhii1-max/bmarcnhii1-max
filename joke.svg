@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="160">
-<rect width="600" height="160" rx="8" fill="#0d1117" stroke="#30363d"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="112">
+<rect width="600" height="112" rx="8" fill="#0d1117" stroke="#30363d"/>
 <text x="24" y="30" font-family="monospace" font-size="13" fill="#30d158">анекдот дня</text>
-<text x="24" y="58" font-family="monospace" font-size="14" fill="#c9d1d9">Два еврея читают газету.</text><text x="24" y="82" font-family="monospace" font-size="14" fill="#c9d1d9">Один: «Смотри, кризис!»</text><text x="24" y="106" font-family="monospace" font-size="14" fill="#c9d1d9">Второй: «Отлично. Значит, всё подешевеет. Кроме</text><text x="24" y="130" font-family="monospace" font-size="14" fill="#c9d1d9">того, что нам надо».</text>
+<text x="24" y="58" font-family="monospace" font-size="14" fill="#c9d1d9">Штирлиц выстрелил вслепую.</text><text x="24" y="82" font-family="monospace" font-size="14" fill="#c9d1d9">Слепая умерла не сразу — сначала она долго кричала.</text>
 </svg>
