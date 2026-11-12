@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="112">
-<rect width="600" height="112" rx="8" fill="#0d1117" stroke="#30363d"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="136">
+<rect width="600" height="136" rx="8" fill="#0d1117" stroke="#30363d"/>
 <text x="24" y="30" font-family="monospace" font-size="13" fill="#30d158">анекдот дня</text>
-<text x="24" y="58" font-family="monospace" font-size="14" fill="#c9d1d9">Штирлиц выстрелил вслепую.</text><text x="24" y="82" font-family="monospace" font-size="14" fill="#c9d1d9">Слепая умерла не сразу — сначала она долго кричала.</text>
+<text x="24" y="58" font-family="monospace" font-size="14" fill="#c9d1d9">Встретились как-то тестировщик и прод.</text><text x="24" y="82" font-family="monospace" font-size="14" fill="#c9d1d9">Тестировщик: «У меня падает».</text><text x="24" y="106" font-family="monospace" font-size="14" fill="#c9d1d9">Прод: «А у пользователей — нет. Пока».</text>
 </svg>
