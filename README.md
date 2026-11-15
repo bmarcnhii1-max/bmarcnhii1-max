@@ -14,6 +14,7 @@
 | Репозиторий | Что внутри |
 |---|---|
 | [blockwave](https://github.com/bmarcnhii1-max/blockwave) | Браузер для Android с мощным встроенным блокировщиком рекламы: EasyList, косметика, инкогнито, 100/100 на adblock-tester. `Kotlin` |
+| [ets2-radio-dj](https://github.com/bmarcnhii1-max/ets2-radio-dj) | Персональное YouTube Music-радио для Euro Truck Simulator 2 / ATS: веб-интерфейс, Game Bar-виджет, OBS-оверлей, Discord RPC. `Python` |
 | [scrcpybar](https://github.com/bmarcnhii1-max/scrcpybar) | Музыка с телефона в Game Bar на ПК: виджет, SMTC, караоке-слова. Только USB, один exe. `C# · Kotlin` |
 | [clawd-android](https://github.com/bmarcnhii1-max/clawd-android) | Android-клиент. `Kotlin` |
 | [clawd-botik](https://github.com/bmarcnhii1-max/clawd-botik) | Клиент Clawd для Windows. `Python` |
