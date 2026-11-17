@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="160">
-<rect width="600" height="160" rx="8" fill="#0d1117" stroke="#30363d"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="256">
+<rect width="600" height="256" rx="8" fill="#0d1117" stroke="#30363d"/>
 <text x="24" y="30" font-family="monospace" font-size="13" fill="#30d158">анекдот дня</text>
-<text x="24" y="58" font-family="monospace" font-size="14" fill="#c9d1d9">Два еврея договорились встретиться.</text><text x="24" y="82" font-family="monospace" font-size="14" fill="#c9d1d9">Один опоздал на час и говорит:</text><text x="24" y="106" font-family="monospace" font-size="14" fill="#c9d1d9">— Зато я сэкономил тебе час ожидания в следующий</text><text x="24" y="130" font-family="monospace" font-size="14" fill="#c9d1d9">раз.</text>
+<text x="24" y="58" font-family="monospace" font-size="14" fill="#c9d1d9">Встретились как-то русский, немец и американец — и</text><text x="24" y="82" font-family="monospace" font-size="14" fill="#c9d1d9">давай хвастаться, у кого интернет быстрее.</text><text x="24" y="106" font-family="monospace" font-size="14" fill="#c9d1d9">Немец: «У меня гигабит — кино скачивается, пока</text><text x="24" y="130" font-family="monospace" font-size="14" fill="#c9d1d9">чайник закипает».</text><text x="24" y="154" font-family="monospace" font-size="14" fill="#c9d1d9">Американец: «У меня спутник — ловлю даже посреди</text><text x="24" y="178" font-family="monospace" font-size="14" fill="#c9d1d9">океана».</text><text x="24" y="202" font-family="monospace" font-size="14" fill="#c9d1d9">Русский: «А у меня самый быстрый: деньги со счёта</text><text x="24" y="226" font-family="monospace" font-size="14" fill="#c9d1d9">улетают раньше, чем страницы грузятся».</text>
 </svg>
