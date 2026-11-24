@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="208">
-<rect width="600" height="208" rx="8" fill="#0d1117" stroke="#30363d"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="160">
+<rect width="600" height="160" rx="8" fill="#0d1117" stroke="#30363d"/>
 <text x="24" y="30" font-family="monospace" font-size="13" fill="#30d158">анекдот дня</text>
-<text x="24" y="58" font-family="monospace" font-size="14" fill="#c9d1d9">Встретились как-то два еврея. Один говорит:</text><text x="24" y="82" font-family="monospace" font-size="14" fill="#c9d1d9">— Слушай, одолжи сто рублей.</text><text x="24" y="106" font-family="monospace" font-size="14" fill="#c9d1d9">Второй:</text><text x="24" y="130" font-family="monospace" font-size="14" fill="#c9d1d9">— А когда отдашь?</text><text x="24" y="154" font-family="monospace" font-size="14" fill="#c9d1d9">Первый:</text><text x="24" y="178" font-family="monospace" font-size="14" fill="#c9d1d9">— Вот за это я тебя и уважаю — сразу о деле!</text>
+<text x="24" y="58" font-family="monospace" font-size="14" fill="#c9d1d9">Встретились как-то тестировщик и программист.</text><text x="24" y="82" font-family="monospace" font-size="14" fill="#c9d1d9">Тестировщик: «У меня всё падает».</text><text x="24" y="106" font-family="monospace" font-size="14" fill="#c9d1d9">Программист: «У меня всё работает. Наверное, у нас</text><text x="24" y="130" font-family="monospace" font-size="14" fill="#c9d1d9">разные продакшены».</text>
 </svg>
